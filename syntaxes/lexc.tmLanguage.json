@@ -9,16 +9,19 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
-		},
-		{
 			"include": "#regexps"
 		},
 		{
-			"include": "#constants"
+			"include": "#terms"
 		},
 		{
 			"include": "#flagDiacritics"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
 		}
 	],
 	"repository": {
@@ -35,6 +38,17 @@
 				{
 					"name": "keyword.other.lexc",
 					"match": "\\b(LEXICON)\\b"
+				}
+			]
+		},
+		"terms": {
+			"name": "string.unquoted.lexc",
+			"begin": "^",
+			"end": " ",
+			"patterns": [
+				{
+					"name": "constant.character.escape.lexc",
+					"match": "%."
 				}
 			]
 		},
