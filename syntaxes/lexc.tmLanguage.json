@@ -12,6 +12,9 @@
 			"include": "#strings"
 		},
 		{
+			"include": "#regexps"
+		},
+		{
 			"include": "#constants"
 		},
 		{
@@ -27,7 +30,7 @@
 				},
 				{
 					"name": "keyword.operator.lexc",
-					"match": ""
+					"match": "[:.?*\\\\%^]"
 				},
 				{
 					"name": "keyword.other.lexc",
@@ -43,6 +46,17 @@
 				{
 					"name": "constant.character.escape.lexc",
 					"match": "\\\\."
+				}
+			]
+		},
+		"regexps": {
+			"name": "string.quoted.regexp.lexc",
+			"begin": "<",
+			"end": ">",
+			"patterns": [
+				{
+					"name": "constant.character.escape.lexc",
+					"match": "%."
 				}
 			]
 		},
