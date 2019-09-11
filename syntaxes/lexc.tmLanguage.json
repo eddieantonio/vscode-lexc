@@ -10,6 +10,12 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#flagDiacritics"
 		}
 	],
 	"repository": {
@@ -18,6 +24,10 @@
 				{
 					"name": "keyword.control.lexc",
 					"match": "\\b(ALPHABET|Alphabet|Sets|Rules|Multichar_Symbols|END)\\b"
+				},
+				{
+					"name": "keyword.operator.lexc",
+					"match": ""
 				},
 				{
 					"name": "keyword.other.lexc",
@@ -48,10 +58,10 @@
 				"match": "#"
 			}]
 		},
-		"variables": {
+		"flagDiacritics": {
 			"patterns": [{
 				"name": "variable.other.lexc",
-				"match": "#"
+				"match": "@[UCDPRNE][.]\\w+([.]\\w+)?@"
 			}]
 		}
 	},
