@@ -1,0 +1,25 @@
+{
+    "name": "lexc",
+    "displayName": ".lexc",
+    "description": "Xerox lexc Lexicon for describing Finite-State Transducers FST",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "lexc",
+            "aliases": ["lexc", "lexc"],
+            "extensions": [".lexc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "lexc",
+            "scopeName": "source.lexc",
+            "path": "./syntaxes/lexc.tmLanguage.json"
+        }]
+    }
+}
