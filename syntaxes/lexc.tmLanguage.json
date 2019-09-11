@@ -9,12 +9,6 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#regexps"
-		},
-		{
-			"include": "#terms"
-		},
-		{
 			"include": "#flagDiacritics"
 		},
 		{
@@ -41,17 +35,6 @@
 				}
 			]
 		},
-		"terms": {
-			"name": "string.unquoted.lexc",
-			"begin": "^",
-			"end": " ",
-			"patterns": [
-				{
-					"name": "constant.character.escape.lexc",
-					"match": "%."
-				}
-			]
-		},
 		"strings": {
 			"name": "string.quoted.double.lexc",
 			"begin": "\"",
@@ -60,17 +43,6 @@
 				{
 					"name": "constant.character.escape.lexc",
 					"match": "\\\\."
-				}
-			]
-		},
-		"regexps": {
-			"name": "string.quoted.regexp.lexc",
-			"begin": "<",
-			"end": ">",
-			"patterns": [
-				{
-					"name": "constant.character.escape.lexc",
-					"match": "%."
 				}
 			]
 		},
