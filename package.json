@@ -1,7 +1,7 @@
 {
     "name": "lexc",
-    "displayName": ".lexc",
-    "description": "Xerox lexc Lexicon for describing Finite-State Transducers FST",
+    "displayName": "lexc",
+    "description": "The Xerox lexc language for defining Finite-State Transducers (FSTs)",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.38.0"
@@ -12,7 +12,7 @@
     "contributes": {
         "languages": [{
             "id": "lexc",
-            "aliases": ["lexc", "lexc"],
+            "aliases": ["lexc"],
             "extensions": [".lexc"],
             "configuration": "./language-configuration.json"
         }],

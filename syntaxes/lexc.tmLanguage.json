@@ -3,6 +3,9 @@
 	"name": "lexc",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -11,10 +14,16 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.lexc",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.lexc",
+					"match": "\\b(ALPHABET|Alphabet|Sets|Rules|Multichar_Symbols|END)\\b"
+				},
+				{
+					"name": "keyword.other.lexc",
+					"match": "\\b(LEXICON)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.lexc",
@@ -26,6 +35,24 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.exclamation-mark.lexc",
+				"match": "!.*"
+			}]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.language.lexc",
+				"match": "#"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "variable.other.lexc",
+				"match": "#"
+			}]
 		}
 	},
 	"scopeName": "source.lexc"
