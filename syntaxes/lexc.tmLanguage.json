@@ -2,18 +2,12 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "lexc",
 	"patterns": [
-		{
-			"include": "#end"
-		},
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#entries"
-		}
+		{ "include": "#end" },
+		{ "include": "#comments" },
+		{ "include": "#keywords" },
+		{ "include": "#lexicons" },
+		{ "include": "#flagDiacritics" },
+		{ "include": "#escapes" }
 	],
 	"repository": {
 		"comments": {
@@ -22,8 +16,11 @@
 				"match": "!.*"
 			}]
 		},
-		"entries": {
-			"patterns": [{ "include": "#lexicons"}]
+		"escapes": {
+			"patterns": [{
+				"name": "constant.character.escape",
+				"match": "%."
+			}]
 		},
 		"lexicons": {
 			"patterns": [
@@ -47,7 +44,7 @@
 				},
 				{
 					"name": "keyword.operator.lexc",
-					"match": "[:.?*\\\\%^]"
+					"match": "[:.?*^]"
 				}
 			]
 		},
@@ -77,7 +74,21 @@
 		"flagDiacritics": {
 			"patterns": [{
 				"name": "variable.other.lexc",
-				"match": "@[UCDPRNE][.]\\w+([.]\\w+)?@"
+				"begin": "@",
+				"end": "@",
+				"patterns": [
+					{ "match": "U[.]\\w+[.]\\w+" },
+					{ "match": "C[.]" },
+					{ "match": "D[.]\\w+(?:[.]\\w+)?" },
+					{ "match": "P[.]\\w+[.]\\w+" },
+					{ "match": "R[.]\\w+(?:[.]\\w+)?" },
+					{ "match": "N[.]\\w+[.]\\w+" },
+					{ "match": "E[.]\\w+[.]\\w+" },
+					{
+						"match": "[^@]+",
+						"name": "invalid.illegal"
+					}
+				]
 			}]
 		}
 	},
