@@ -3,37 +3,59 @@
 	"name": "lexc",
 	"patterns": [
 		{
+			"include": "#end"
+		},
+		{
 			"include": "#comments"
 		},
 		{
 			"include": "#keywords"
 		},
 		{
-			"include": "#flagDiacritics"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#constants"
+			"include": "#entries"
 		}
 	],
 	"repository": {
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.exclamation-mark.lexc",
+				"match": "!.*"
+			}]
+		},
+		"entries": {
+			"patterns": [{ "include": "#lexicons"}]
+		},
+		"lexicons": {
+			"patterns": [
+				{
+					"name": "meta.lexicon.lexc",
+					"match": "^(LEXICON)\\s*(?:(Root)|(\\w+))\\s*(;)?",
+					"captures": {
+						"1": { "name": "storage.type" },
+						"2": { "name": "variable.language.lexc" },
+						"3": { "name": "variable.parameter.lexc" },
+						"4": { "name": "invalid.illegal.lexc" }
+					}
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [
 				{
 					"name": "keyword.control.lexc",
-					"match": "\\b(ALPHABET|Alphabet|Sets|Rules|Multichar_Symbols|END)\\b"
+					"match": "\\b(ALPHABET|Alphabet|Sets|Rules|Multichar_Symbols)\\b"
 				},
 				{
 					"name": "keyword.operator.lexc",
 					"match": "[:.?*\\\\%^]"
-				},
-				{
-					"name": "keyword.other.lexc",
-					"match": "\\b(LEXICON)\\b"
 				}
 			]
+		},
+		"end": {
+			"begin": "\\bEND\\s*\\n?",
+			"beginCaptures": { "0": { "name": "keyword.control.lexc" } },
+			"contentName": "comment.block.documentation.lexc",
+			"end": "\\z"
 		},
 		"strings": {
 			"name": "string.quoted.double.lexc",
@@ -45,12 +67,6 @@
 					"match": "\\\\."
 				}
 			]
-		},
-		"comments": {
-			"patterns": [{
-				"name": "comment.line.exclamation-mark.lexc",
-				"match": "!.*"
-			}]
 		},
 		"constants": {
 			"patterns": [{
