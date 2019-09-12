@@ -6,8 +6,8 @@
 		{ "include": "#comments" },
 		{ "include": "#keywords" },
 		{ "include": "#lexicons" },
-		{ "include": "#flagDiacritics" },
-		{ "include": "#escapes" }
+		{ "include": "#escapes" },
+		{ "include": "#flagDiacritics" }
 	],
 	"repository": {
 		"comments": {
@@ -18,7 +18,7 @@
 		},
 		"escapes": {
 			"patterns": [{
-				"name": "constant.character.escape",
+				"name": "constant.character.escape.lexc",
 				"match": "%."
 			}]
 		},
@@ -28,9 +28,9 @@
 					"name": "meta.lexicon.lexc",
 					"match": "^(LEXICON)\\s*(?:(Root)|(\\w+))\\s*(;)?",
 					"captures": {
-						"1": { "name": "storage.type" },
+						"1": { "name": "storage.type.lexc" },
 						"2": { "name": "variable.language.lexc" },
-						"3": { "name": "variable.parameter.lexc" },
+						"3": { "name": "entity.name.type.lexc" },
 						"4": { "name": "invalid.illegal.lexc" }
 					}
 				}
@@ -78,7 +78,7 @@
 				"end": "@",
 				"patterns": [
 					{ "match": "U[.]\\w+[.]\\w+" },
-					{ "match": "C[.]" },
+					{ "match": "C[.]\\w+" },
 					{ "match": "D[.]\\w+(?:[.]\\w+)?" },
 					{ "match": "P[.]\\w+[.]\\w+" },
 					{ "match": "R[.]\\w+(?:[.]\\w+)?" },
@@ -86,7 +86,7 @@
 					{ "match": "E[.]\\w+[.]\\w+" },
 					{
 						"match": "[^@]+",
-						"name": "invalid.illegal"
+						"name": "invalid.illegal.lexc"
 					}
 				]
 			}]
