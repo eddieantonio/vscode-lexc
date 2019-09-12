@@ -2,10 +2,15 @@
     "name": "lexc",
     "displayName": "lexc",
     "description": "The Xerox lexc language for defining Finite-State Transducers (FSTs)",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.38.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eddieantonio/vscode-lexc.git"
+    },
+    "publisher": "eddieantonio",
     "categories": [
         "Programming Languages"
     ],
