@@ -7,6 +7,9 @@
 		{ "include": "#keywords" },
 		{ "include": "#lexicons" },
 		{ "include": "#escapes" },
+		{ "include": "#regexps"},
+		{ "include": "#strings"},
+		{ "include": "#constants"},
 		{ "include": "#flagDiacritics" }
 	],
 	"repository": {
@@ -57,17 +60,11 @@
 		"strings": {
 			"name": "string.quoted.double.lexc",
 			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.lexc",
-					"match": "\\\\."
-				}
-			]
+			"end": "\""
 		},
 		"constants": {
 			"patterns": [{
-				"name": "constant.language.lexc",
+				"name": "variable.language.lexc",
 				"match": "#"
 			}]
 		},
@@ -90,6 +87,17 @@
 					}
 				]
 			}]
+		},
+		"regexps": {
+			"name": "string.quoted.regexp.lexc",
+			"begin": "<",
+			"end": ">",
+			"patterns": [
+				{
+					"name": "constant.character.escape.lexc",
+					"match": "%."
+				}
+			]
 		}
 	},
 	"scopeName": "source.lexc"
