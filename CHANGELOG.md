@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2019.09.11
+### Added
+- MIT license
+
+## [1.0.1] - 2019.09.11
+### Changed
+- lowered the minimum required VSCode version dramatically.
+
 ## [1.0.0] - 2019.09.11
 
 ## Added
