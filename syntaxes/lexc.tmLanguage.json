@@ -29,7 +29,7 @@
 			"patterns": [
 				{
 					"name": "meta.lexicon.lexc",
-					"match": "^(LEXICON)\\s*(?:(Root)|(\\w+))\\s*(;)?",
+					"match": "\\b(LEXICON)\\b\\s*(?:(Root)|(\\w+)|)\\s*(;)?",
 					"captures": {
 						"1": { "name": "storage.type.lexc" },
 						"2": { "name": "variable.language.lexc" },
