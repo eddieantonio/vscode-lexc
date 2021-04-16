@@ -18,3 +18,9 @@ Minor tweaks for publication
 ### 1.0.0
 
 Initial release of `.lexc` syntax highlighting.
+
+## License
+
+Copyright © 2019 National Research Council Canada.
+
+Licensed under the MIT license.
