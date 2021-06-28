@@ -52,7 +52,7 @@
 			]
 		},
 		"end": {
-			"begin": "\\bEND\\s*\\n?",
+			"begin": "\\bEND\\b\\s*\\n?",
 			"beginCaptures": { "0": { "name": "keyword.control.lexc" } },
 			"contentName": "comment.block.documentation.lexc",
 			"end": "\\z"
