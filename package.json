@@ -2,7 +2,7 @@
     "name": "lexc",
     "displayName": "lexc",
     "description": "The Xerox lexc language for defining Finite-State Transducers (FSTs)",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "license": "mit",
     "engines": {
         "vscode": "^1.8.0"
