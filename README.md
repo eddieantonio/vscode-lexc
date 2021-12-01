@@ -8,6 +8,12 @@ Provides syntax highlighting for the `lexc` Lexicon Compiler language, used by `
 
 ## Release Notes
 
+### 1.0.5
+Better `LEXICON` highlighting
+
+### 1.0.4
+Better `END` and `LEXICON` highlighting
+
 ### 1.0.2
 Make it explicit that this is MIT licensed
 
